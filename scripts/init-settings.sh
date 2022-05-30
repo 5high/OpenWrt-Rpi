@@ -35,6 +35,9 @@ uci set cpufreq.cpufreq.governor4='performance'
 # Fix igmpproxy
 uci set igmpproxy.@phyint[0].altnet='0.0.0.0/0'
 
+# Enable UPNP
+uci set upnpd.config.enabled='1'
+
 # Check file system during boot
 uci set fstab.@global[0].check_fs=1
 uci commit
