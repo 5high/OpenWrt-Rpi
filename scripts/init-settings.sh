@@ -38,6 +38,9 @@ uci set igmpproxy.@phyint[0].altnet='0.0.0.0/0'
 # Enable UPNP
 uci set upnpd.config.enabled='1'
 
+# Config Docker
+dockerd.globals.registry_mirrors='https://hub-mirror.c.163.com'
+
 # Check file system during boot
 uci set fstab.@global[0].check_fs=1
 uci commit
