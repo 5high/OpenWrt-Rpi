@@ -28,6 +28,13 @@ uci set turboacc.config.fullcone_nat='1'
 uci set turboacc.config.dns_caching='1'
 uci set turboacc.config.bbr_cca='1'
 
+# CPU Performance
+uci set cpufreq.cpufreq.governor0='performance'
+uci set cpufreq.cpufreq.governor4='performance'
+
+# Fix igmpproxy
+uci set igmpproxy.@phyint[0].altnet='0.0.0.0/0'
+
 # Check file system during boot
 uci set fstab.@global[0].check_fs=1
 uci commit
