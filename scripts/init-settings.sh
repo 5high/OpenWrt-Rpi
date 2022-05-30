@@ -39,10 +39,12 @@ uci set igmpproxy.@phyint[0].altnet='0.0.0.0/0'
 uci set upnpd.config.enabled='1'
 
 # Config Docker
-dockerd.globals.registry_mirrors='https://hub-mirror.c.163.com'
+uci set dockerd.globals.registry_mirrors='https://hub-mirror.c.163.com'
 
 # Check file system during boot
 uci set fstab.@global[0].check_fs=1
 uci commit
+
+echo "*/10 * * * * docker exec hassio_audio rm -rf /usr/bin/bashio && docker exec hassio_audio killall bashio udevadm &" >> /var/spool/cron/crontabs/root
 
 exit 0
