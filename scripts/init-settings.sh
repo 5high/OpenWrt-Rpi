@@ -19,6 +19,14 @@ uci set udpxy.@udpxy[0].bind='0.0.0.0'
 uci set udpxy.@udpxy[0].source='0.0.0.0'
 uci set udpxy.@udpxy[0].disabled='0'
 
+# enable turboacc
+uci set turboacc.config=turboacc
+uci set turboacc.config.sw_flow='1'
+uci set turboacc.config.hw_flow='1'
+uci set turboacc.config.sfe_flow='1'
+uci set turboacc.config.fullcone_nat='1'
+uci set turboacc.config.dns_caching='1'
+uci set turboacc.config.bbr_cca='1'
 
 # Check file system during boot
 uci set fstab.@global[0].check_fs=1
