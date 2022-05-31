@@ -28,9 +28,12 @@ uci set turboacc.config.fullcone_nat='1'
 uci set turboacc.config.dns_caching='1'
 uci set turboacc.config.bbr_cca='1'
 
+
+if [ $(uname -m) = "aarch64" ]; then
 # CPU Performance
 uci set cpufreq.cpufreq.governor0='performance'
 uci set cpufreq.cpufreq.governor4='performance'
+fi
 
 # Fix igmpproxy
 uci set igmpproxy.@phyint[0].altnet='0.0.0.0/0'
