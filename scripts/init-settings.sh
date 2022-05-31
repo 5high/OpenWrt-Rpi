@@ -35,6 +35,21 @@ uci set cpufreq.cpufreq.governor0='performance'
 uci set cpufreq.cpufreq.governor4='performance'
 fi
 
+# Set hybird mode to lan
+uci set dhcp.lan.dhcpv6=hybrid
+uci set dhcp.lan.ndp=hybrid
+uci set dhcp.lan.ra=hybrid
+uci set dhcp.lan.ra_management=1
+uci set dhcp.lan.ra_default=1
+
+# Set hybird mode to wan6
+uci set dhcp.wan6=dhcp
+uci set dhcp.wan6.interface=wan
+uci set dhcp.wan6.ra=hybrid
+uci set dhcp.wan6.dhcpv6=hybrid
+uci set dhcp.wan6.ndp=hybrid
+uci set dhcp.wan6.master=1
+    
 # Fix igmpproxy
 uci set igmpproxy.@phyint[0].altnet='0.0.0.0/0'
 
