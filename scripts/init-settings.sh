@@ -63,10 +63,10 @@ uci set igmpproxy.@phyint[0].altnet='0.0.0.0/0'
 uci set upnpd.config.enabled='1'
 
 # Config Docker
-echo "{
-        "log-driver": "journald",
-        "storage-driver": "overlay2"
-       }" > /etc/docker/daemon.json
+#echo "{
+#        "log-driver": "journald",
+#        "storage-driver": "overlay2"
+#       }" > /etc/docker/daemon.json
        
 uci set dockerd.globals.registry_mirrors='https://hub-mirror.c.163.com'
 
