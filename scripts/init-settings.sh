@@ -12,6 +12,9 @@ uci set luci.main.mediaurlbase='/luci-static/argon'
 # Disable IPV6 ula prefix
 sed -i 's/^[^#].*option ula/#&/' /etc/config/network
 
+# enable ssh on WAN
+dropbear.@dropbear[0].GatewayPorts='on'
+
 # config udpxy
 uci set udpxy.@udpxy[0].mcsub_renew='300'
 uci set udpxy.@udpxy[0].buffer_size='2Mb'
@@ -41,6 +44,9 @@ uci set dhcp.lan.ndp=hybrid
 uci set dhcp.lan.ra=hybrid
 uci set dhcp.lan.ra_management=1
 uci set dhcp.lan.ra_default=1
+
+# enable igmp snooping on LAN
+network.lan.igmp_snooping='1'
 
 # Set hybird mode to wan6
 uci set dhcp.wan6=dhcp
