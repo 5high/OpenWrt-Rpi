@@ -70,10 +70,13 @@ uci set upnpd.config.enabled='1'
        
 uci set dockerd.globals.registry_mirrors='https://hub-mirror.c.163.com'
 
+# disable IPV6 DNS
+uci set dhcp.@dnsmasq[0].filter_aaaa='1'
+
 # Check file system during boot
 uci set fstab.@global[0].check_fs=1
 uci commit
 
-echo "*/10 * * * * docker exec hassio_audio rm -rf /usr/bin/bashio && docker exec hassio_audio killall bashio udevadm &" >> /var/spool/cron/crontabs/root
+#echo "*/10 * * * * docker exec hassio_audio rm -rf /usr/bin/bashio && docker exec hassio_audio killall bashio udevadm &" >> /var/spool/cron/crontabs/root
 
 exit 0
