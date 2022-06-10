@@ -31,6 +31,12 @@ svn co https://github.com/messense/aliyundrive-webdav/trunk/openwrt/aliyundrive-
 svn co https://github.com/messense/aliyundrive-webdav/trunk/openwrt/luci-app-aliyundrive-webdav
 popd
 
+# Add Mosdns
+pushd package
+svn co https://github.com/QiuSimons/openwrt-mos/tree/master/luci-app-mosdns
+svn co https://github.com/QiuSimons/openwrt-mos/tree/master/mosdns
+popd
+
 # Add xupnpd IPTV Source
 mkdir -p  files/usr/share/xupnpd/playlists
 wget https://raw.githubusercontent.com/qwerttvv/Beijing-IPTV/master/IPTV-Unicom-Multicast.m3u -O files/usr/share/xupnpd/playlists/BJCNC.m3u
