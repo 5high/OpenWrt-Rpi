@@ -1,3 +1,6 @@
+## fork来增删改一下来适合hassio安装，尽量不出现苹果家庭配对等问题。
+
+
 # [OpenWrt-Rpi](https://github.com/SuLingGG/OpenWrt-Rpi)
 
 ## 项目介绍
