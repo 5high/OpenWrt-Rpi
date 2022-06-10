@@ -73,6 +73,9 @@ uci set dockerd.globals.registry_mirrors='https://hub-mirror.c.163.com'
 # disable IPV6 DNS
 uci set dhcp.@dnsmasq[0].filter_aaaa='1'
 
+# disable assgin internal IPv6 address
+uci delete network.lan.ip6assign
+
 # Check file system during boot
 uci set fstab.@global[0].check_fs=1
 uci commit
