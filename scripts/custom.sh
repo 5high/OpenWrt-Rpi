@@ -32,7 +32,7 @@ svn co https://github.com/messense/aliyundrive-webdav/trunk/openwrt/luci-app-ali
 popd
 
 # Add xupnpd IPTV Source
-mkdir -p  /usr/share/xupnpd/playlists
+mkdir -p  files/usr/share/xupnpd/playlists
 wget https://raw.githubusercontent.com/qwerttvv/Beijing-IPTV/master/IPTV-Unicom-Multicast.m3u -O /usr/share/xupnpd/playlists/PBCNC.m3u
 
 # Add information
