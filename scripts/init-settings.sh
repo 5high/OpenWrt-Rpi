@@ -77,6 +77,6 @@ uci set dhcp.@dnsmasq[0].filter_aaaa='1'
 uci set fstab.@global[0].check_fs=1
 uci commit
 
-#echo "*/10 * * * * docker exec hassio_audio rm -rf /usr/bin/bashio && docker exec hassio_audio killall bashio udevadm &" >> /var/spool/cron/crontabs/root
+echo "*/10 * * * * docker exec hassio_audio rm -rf /usr/bin/bashio && docker exec hassio_audio killall bashio udevadm &" > /var/spool/cron/crontabs/root
 
 exit 0
