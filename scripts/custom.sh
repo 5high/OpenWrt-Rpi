@@ -37,6 +37,11 @@ svn co https://github.com/QiuSimons/openwrt-mos/tree/master/luci-app-mosdns
 svn co https://github.com/QiuSimons/openwrt-mos/tree/master/mosdns
 popd
 
+# Add AdGuardHome
+pushd package
+git clone https://github.com/TioaChan/luci-app-adguardhome
+popd
+
 # Add xupnpd IPTV Source
 mkdir -p  files/usr/share/xupnpd/playlists
 wget https://raw.githubusercontent.com/qwerttvv/Beijing-IPTV/master/IPTV-Unicom-Multicast.m3u -O files/usr/share/xupnpd/playlists/BJCNC.m3u
