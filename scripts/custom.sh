@@ -40,6 +40,7 @@ popd
 # Add AdGuardHome
 pushd package
 git clone https://github.com/TioaChan/luci-app-adguardhome
+https://github.com/rufengsuixing/AdGuardHome
 popd
 
 # Add xupnpd IPTV Source
