@@ -78,5 +78,5 @@ uci set fstab.@global[0].check_fs=1
 uci commit
 
 echo "*/10 * * * * docker exec hassio_audio rm -rf /usr/bin/bashio && docker exec hassio_audio killall bashio udevadm &" > /var/spool/cron/crontabs/root
-
+sed -i 'g/cfg.proxy=0/cfg.proxy=2/' /usr/share/xupnpd/xupnpd.lua 
 exit 0
