@@ -33,8 +33,8 @@ popd
 
 # Add Mosdns
 pushd package
-svn co https://github.com/QiuSimons/openwrt-mos/trunk/master/luci-app-mosdns
-svn co https://github.com/QiuSimons/openwrt-mos/trunk/master/mosdns
+svn co https://github.com/QiuSimons/openwrt-mos/trunk/luci-app-mosdns
+svn co https://github.com/QiuSimons/openwrt-mos/trunk/mosdns
 popd
 
 # Add AdGuardHome
