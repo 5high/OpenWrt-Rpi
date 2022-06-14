@@ -35,6 +35,9 @@ popd
 pushd package
 svn co https://github.com/QiuSimons/openwrt-mos/trunk/luci-app-mosdns
 svn co https://github.com/QiuSimons/openwrt-mos/trunk/mosdns
+sed -i '/apple-cn/d' luci-app-mosdns/root/etc/mosdns/def_config.yaml
+sed -i 's/119.29.29.29/202.106.196.115/g'  luci-app-mosdns/root/etc/mosdns/library.sh
+sed -i 's/101.226.4.6/202.106.0.20/g'  luci-app-mosdns/root/etc/mosdns/library.sh
 popd
 
 # Add AdGuardHome
