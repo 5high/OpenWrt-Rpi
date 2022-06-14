@@ -86,5 +86,6 @@ uci commit
 
 echo "*/10 * * * * docker exec hassio_audio rm -rf /usr/bin/bashio && docker exec hassio_audio killall bashio udevadm &" > /var/spool/cron/crontabs/root
 sed -i 's/proxy=2/proxy=0/g' /usr/share/xupnpd/xupnpd.lua
+echo "<a href=\"https://sumju.net\" target=\"_blank\">智能家居</a>" > /etc/bench.log
 echo "echo \" <a href=\"https://sumju.net\" target=\"_blank\">智能家居</a>\" >> /etc/bench.log" >> /etc/coremark.sh
 exit 0
