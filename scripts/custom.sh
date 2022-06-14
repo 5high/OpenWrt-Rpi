@@ -49,6 +49,7 @@ popd
 # Add xupnpd IPTV Source
 mkdir -p  files/usr/share/xupnpd/playlists
 wget https://raw.githubusercontent.com/qwerttvv/Beijing-IPTV/master/IPTV-Unicom-Multicast.m3u -O files/usr/share/xupnpd/playlists/BJCNC.m3u
+wget https://gist.githubusercontent.com/muyouming/36d48f3d18cdecdefb31334e90844e99/raw/40c15156c05b3a0092ce45d35b656e21d1c31a9d/SCITV_UDPXY.M3U -O files/usr/share/xupnpd/playlists/SCCT.m3u
 
 # Add information
 #sed -i '/Load Average/i\\t\t<tr><td width="33%"><%:Telegram %></td><td><a href="https://sumju.net"><%:智能家居博客%></a></td></tr>' package/lean/autocore/files/arm/index.htm
