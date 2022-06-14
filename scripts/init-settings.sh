@@ -28,7 +28,7 @@ uci set turboacc.config.sw_flow='1'
 uci set turboacc.config.hw_flow='1'
 uci set turboacc.config.sfe_flow='1'
 uci set turboacc.config.fullcone_nat='1'
-uci set turboacc.config.dns_caching='1'
+uci set turboacc.config.dns_caching='0'
 uci set turboacc.config.bbr_cca='1'
 
 
@@ -72,6 +72,11 @@ uci set dockerd.globals.registry_mirrors='https://hub-mirror.c.163.com'
 
 # disable IPV6 DNS
 uci set dhcp.@dnsmasq[0].filter_aaaa='1'
+
+# Enable MosDNS
+mosdns.mosdns.geo_auto_update='1'
+mosdns.mosdns.redirect='1'
+mosdns.mosdns.enabled='1'
 
 # Check file system during boot
 uci set fstab.@global[0].check_fs=1
