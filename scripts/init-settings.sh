@@ -77,6 +77,8 @@ uci set dhcp.@dnsmasq[0].filter_aaaa='1'
 mosdns.mosdns.geo_auto_update='1'
 mosdns.mosdns.redirect='1'
 mosdns.mosdns.enabled='1'
+mosdns.mosdns.remote_dns1='208.67.222.222'
+mosdns.mosdns.remote_dns2='208.67.220.220'
 
 # Check file system during boot
 uci set fstab.@global[0].check_fs=1
