@@ -77,6 +77,7 @@ uci set dhcp.@dnsmasq[0].filter_aaaa='1'
 mosdns.mosdns.geo_auto_update='1'
 mosdns.mosdns.redirect='1'
 mosdns.mosdns.enabled='1'
+mosdns.mosdns.listen_port='5355'
 mosdns.mosdns.remote_dns1='1.1.1.1'
 mosdns.mosdns.remote_dns2='45.11.45.11'
 
