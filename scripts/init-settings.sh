@@ -73,6 +73,9 @@ uci set dockerd.globals.registry_mirrors='https://hub-mirror.c.163.com'
 # disable IPV6 DNS
 uci set dhcp.@dnsmasq[0].filter_aaaa='1'
 
+# enable dhcp force
+uci set dhcp.lan.force='1'
+
 # Enable MosDNS
 mosdns.mosdns.geo_auto_update='1'
 mosdns.mosdns.redirect='1'
