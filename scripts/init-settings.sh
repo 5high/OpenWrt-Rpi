@@ -76,6 +76,11 @@ uci set dhcp.@dnsmasq[0].filter_aaaa='1'
 # enable dhcp force
 uci set dhcp.lan.force='1'
 
+# Configure uHttpd
+uci set uhttpd.main.redirect_https='1'
+uci set uhttpd.main.rfc1918_filter='0'
+
+
 # Enable MosDNS
 uci set mosdns.mosdns.geo_auto_update='1'
 uci set mosdns.mosdns.redirect='1'
