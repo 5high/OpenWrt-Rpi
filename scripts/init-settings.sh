@@ -81,8 +81,8 @@ uci set mosdns.mosdns.geo_auto_update='1'
 uci set mosdns.mosdns.redirect='1'
 uci set mosdns.mosdns.enabled='1'
 uci set mosdns.mosdns.listen_port='5355'
-uci set mosdns.mosdns.remote_dns1='1.1.1.1'
-uci set mosdns.mosdns.remote_dns2='45.11.45.11'
+uci set mosdns.mosdns.remote_dns1='208.67.222.222'
+uci set mosdns.mosdns.remote_dns2='208.67.220.220'
 
 # Check file system during boot
 uci set fstab.@global[0].check_fs=1
