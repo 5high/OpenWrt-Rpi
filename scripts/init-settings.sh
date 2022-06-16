@@ -57,7 +57,7 @@ uci set dhcp.wan6.ndp=hybrid
 uci set dhcp.wan6.master=1
     
 # Fix igmpproxy
-uci set igmpproxy.@phyint[0].altnet='0.0.0.0/0'
+uci set "igmpproxy.@phyint[0].altnet=0.0.0.0/0"
 
 # Enable UPNP
 uci set upnpd.config.enabled='1'
