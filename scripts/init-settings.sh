@@ -77,12 +77,12 @@ uci set dhcp.@dnsmasq[0].filter_aaaa='1'
 uci set dhcp.lan.force='1'
 
 # Enable MosDNS
-mosdns.mosdns.geo_auto_update='1'
-mosdns.mosdns.redirect='1'
-mosdns.mosdns.enabled='1'
-mosdns.mosdns.listen_port='5355'
-mosdns.mosdns.remote_dns1='1.1.1.1'
-mosdns.mosdns.remote_dns2='45.11.45.11'
+uci set mosdns.mosdns.geo_auto_update='1'
+uci set mosdns.mosdns.redirect='1'
+uci set mosdns.mosdns.enabled='1'
+uci set mosdns.mosdns.listen_port='5355'
+uci set mosdns.mosdns.remote_dns1='1.1.1.1'
+uci set mosdns.mosdns.remote_dns2='45.11.45.11'
 
 # Check file system during boot
 uci set fstab.@global[0].check_fs=1
