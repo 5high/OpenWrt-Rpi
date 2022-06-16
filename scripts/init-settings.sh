@@ -13,14 +13,14 @@ uci set luci.main.mediaurlbase='/luci-static/argon'
 sed -i 's/^[^#].*option ula/#&/' /etc/config/network
 
 # enable ssh on WAN
-dropbear.@dropbear[0].GatewayPorts='on'
+uci set "dropbear.@dropbear[0].GatewayPorts=on"
 
 # config udpxy
-uci set udpxy.@udpxy[0].mcsub_renew='300'
-uci set udpxy.@udpxy[0].buffer_size='2Mb'
-uci set udpxy.@udpxy[0].bind='0.0.0.0'
-uci set udpxy.@udpxy[0].source='0.0.0.0'
-uci set udpxy.@udpxy[0].disabled='0'
+uci set "udpxy.@udpxy[0].mcsub_renew=300"
+uci set "udpxy.@udpxy[0].buffer_size=2Mb"
+uci set "udpxy.@udpxy[0].bind=0.0.0.0"
+uci set "udpxy.@udpxy[0].source=0.0.0.0"
+uci set "udpxy.@udpxy[0].disabled=0"
 
 # enable turboacc
 uci set turboacc.config=turboacc
