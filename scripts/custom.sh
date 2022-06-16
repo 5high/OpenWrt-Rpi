@@ -36,8 +36,10 @@ pushd package
 svn co https://github.com/QiuSimons/openwrt-mos/trunk/luci-app-mosdns
 svn co https://github.com/QiuSimons/openwrt-mos/trunk/mosdns
 sed -i '/apple-cn/d' luci-app-mosdns/root/etc/mosdns/def_config.yaml
-sed -i 's/119.29.29.29/202.106.196.115/g'  luci-app-mosdns/root/etc/mosdns/library.sh
-sed -i 's/101.226.4.6/202.106.0.20/g'  luci-app-mosdns/root/etc/mosdns/library.sh
+#sed -i 's/119.29.29.29/202.106.196.115/g'  luci-app-mosdns/root/etc/mosdns/library.sh
+#sed -i 's/101.226.4.6/202.106.0.20/g'  luci-app-mosdns/root/etc/mosdns/library.sh
+sed -i 's/119.29.29.29/114.114.114.114/g'  luci-app-mosdns/root/etc/mosdns/library.sh
+sed -i 's/101.226.4.6/1.2.4.8/g'  luci-app-mosdns/root/etc/mosdns/library.sh
 mkdir -p files/usr/share/v2ray/
 wget https://gh.404delivr.workers.dev/https://github.com/QiuSimons/openwrt-mos/raw/master/dat/geoip.dat -O files/usr/share/v2ray/geoip.dat
 wget https://gh.404delivr.workers.dev/https://github.com/QiuSimons/openwrt-mos/raw/master/dat/geosite.dat -O files/usr/share/v2ray/geoip.dat
