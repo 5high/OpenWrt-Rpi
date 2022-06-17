@@ -46,7 +46,7 @@ uci set dhcp.lan.ra_management=1
 uci set dhcp.lan.ra_default=1
 
 # enable igmp snooping on LAN
-network.lan.igmp_snooping='1'
+uci set network.lan.igmp_snooping='1'
 
 # Set hybird mode to wan6
 uci set dhcp.wan6=dhcp
@@ -70,9 +70,6 @@ uci set upnpd.config.enabled='1'
        
 uci set dockerd.globals.registry_mirrors='https://hub-mirror.c.163.com'
 
-# disable IPV6 DNS
-uci set "dhcp.@dnsmasq[0].filter_aaaa=1"
-
 # enable dhcp force
 uci set dhcp.lan.force='1'
 
@@ -88,9 +85,20 @@ uci set mosdns.mosdns.enabled='1'
 uci set mosdns.mosdns.listen_port='5355'
 uci set mosdns.mosdns.remote_dns1='208.67.222.222'
 uci set mosdns.mosdns.remote_dns2='208.67.220.220'
+uci set "passwall.@global[0].dns_mode=udp"
+uci set "passwall.@global[0].dns_forward=127.0.0.1:5355"
+uci set "passwall.@global[0].remote_dns=127.0.0.1:5355"
+uci set "passwall.@global[0].up_china_dns=127.0.0.1:5355"
+uci set "passwall.@global[0].custom_dns=127.0.0.1#5553"
+uci set "shadowsocksr.@global[0].tunnel_forward=127.0.0.1:5355"
 
 # Check file system during boot
 uci set "fstab.@global[0].check_fs=1"
+
+uci commit
+
+# disable IPV6 DNS
+uci set "dhcp.@dnsmasq[0].filter_aaaa=1"
 uci commit
 
 echo "*/10 * * * * docker exec hassio_audio rm -rf /usr/bin/bashio && docker exec hassio_audio killall bashio udevadm &" > /var/spool/cron/crontabs/root
