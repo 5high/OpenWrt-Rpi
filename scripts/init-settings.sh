@@ -94,6 +94,7 @@ uci set "shadowsocksr.@global[0].tunnel_forward=127.0.0.1:5355"
 
 # Check file system during boot
 uci set "fstab.@global[0].check_fs=1"
+uci set "fstab.@global[0].anon_mount=1"
 
 uci commit
 
