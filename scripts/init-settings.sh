@@ -90,6 +90,7 @@ uci set "passwall.@global[0].dns_forward=127.0.0.1:5355"
 uci set "passwall.@global[0].remote_dns=127.0.0.1:5355"
 uci set "passwall.@global[0].up_china_dns=127.0.0.1:5355"
 uci set "passwall.@global[0].custom_dns=127.0.0.1#5553"
+uci set "passwall.@global[0].remote_dns=127.0.0.1:5355"
 uci set "shadowsocksr.@global[0].tunnel_forward=127.0.0.1:5355"
 
 # Check file system during boot
