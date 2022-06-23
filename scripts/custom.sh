@@ -29,6 +29,10 @@ sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
 pushd package
 svn co https://github.com/messense/aliyundrive-webdav/trunk/openwrt/aliyundrive-webdav
 svn co https://github.com/messense/aliyundrive-webdav/trunk/openwrt/luci-app-aliyundrive-webdav
+
+svn co https://github.com/messense/aliyundrive-fuse/trunk/openwrt/aliyundrive-fuse
+svn co https://github.com/messense/aliyundrive-fuse/trunk/openwrt/luci-app-aliyundrive-fuse
+
 popd
 
 # Add Mosdns
