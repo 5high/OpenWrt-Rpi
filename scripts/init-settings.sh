@@ -55,6 +55,9 @@ uci set dhcp.wan6.ra=hybrid
 uci set dhcp.wan6.dhcpv6=hybrid
 uci set dhcp.wan6.ndp=hybrid
 uci set dhcp.wan6.master=1
+
+# WeiXin 
+uci set network.lan.dns='127.0.0.1'
     
 # Fix igmpproxy
 uci set "igmpproxy.@phyint[0].altnet=0.0.0.0/0"
