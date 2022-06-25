@@ -53,7 +53,7 @@ popd
 
 # Add AdGuardHome
 pushd package
-git clone https://github.com/TioaChan/luci-app-adguardhome
+git clone https://github.com/5high/luci-app-adguardhome
 #https://github.com/rufengsuixing/AdGuardHome
 popd
 
