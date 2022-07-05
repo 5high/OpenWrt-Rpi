@@ -51,6 +51,12 @@ wget https://gh.404delivr.workers.dev/https://github.com/QiuSimons/openwrt-mos/r
 wget https://gh.404delivr.workers.dev/https://github.com/QiuSimons/openwrt-mos/raw/master/dat/geosite.dat -O files/usr/share/v2ray/geoip.dat
 popd
 
+sudo rm -rf ./feeds/packages/net/mosdns && cp -rf ./feeds/kenzo/mosdns ./feeds/packages/net/mosdns
+sed -i 's/mosdns_neo/mosdns/g' ./feeds/kenzo/luci-app-mosdns/Makefile
+sed -i 's/mosdns_neo/mosdns/g' ./feeds/kenzo/mosdns/Makefile
+sed -i 's/mosdns_neo/mosdns/g' ./feeds/packages/net/mosdns/Makefile
+
+
 # Add AdGuardHome
 pushd package
 git clone https://github.com/5high/luci-app-adguardhome
