@@ -37,8 +37,8 @@ popd
 
 # Add Mosdns
 pushd package
-svn co https://github.com/5high/openwrt-mos/trunk/luci-app-mosdns
-svn co https://github.com/5high/openwrt-mos/trunk/mosdns
+svn co https://github.com/QiuSimons/openwrt-mos/trunk/luci-app-mosdns
+svn co https://github.com/QiuSimons/openwrt-mos/trunk/mosdns
 sed -i '/apple-cn/d' luci-app-mosdns/root/etc/mosdns/def_config.yaml
 sed -i 's/\${{ uci -q get mosdns.mosdns.remote_dns1 }}/tls\:\/\/\$\{\{\ uci\ \-q\ get\ mosdns\.mosdns\.remote_dns1\ \}\}/g' luci-app-mosdns/root/etc/mosdns/def_config.yaml
 sed -i 's/\${{ uci -q get mosdns.mosdns.remote_dns2 }}/tls\:\/\/\$\{\{\ uci\ \-q\ get\ mosdns\.mosdns\.remote_dns2\ \}\}/g' luci-app-mosdns/root/etc/mosdns/def_config.yaml
