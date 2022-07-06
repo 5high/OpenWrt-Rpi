@@ -36,6 +36,7 @@ svn co https://github.com/messense/aliyundrive-fuse/trunk/openwrt/luci-app-aliyu
 popd
 
 # Add Mosdns
+rm -rf feeds/packages/net/mosdns
 pushd package
 svn co https://github.com/QiuSimons/openwrt-mos/trunk/luci-app-mosdns
 svn co https://github.com/QiuSimons/openwrt-mos/trunk/mosdns
