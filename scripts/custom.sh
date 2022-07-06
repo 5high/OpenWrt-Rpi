@@ -50,6 +50,7 @@ svn co https://github.com/QiuSimons/openwrt-mos/trunk/mosdns
 mkdir -p files/usr/share/v2ray/
 wget https://gh.404delivr.workers.dev/https://github.com/QiuSimons/openwrt-mos/raw/master/dat/geoip.dat -O files/usr/share/v2ray/geoip.dat
 wget https://gh.404delivr.workers.dev/https://github.com/QiuSimons/openwrt-mos/raw/master/dat/geosite.dat -O files/usr/share/v2ray/geoip.dat
+export CGO_ENABLED=1
 popd
 
 # Add AdGuardHome
