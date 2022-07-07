@@ -36,10 +36,13 @@ svn co https://github.com/messense/aliyundrive-fuse/trunk/openwrt/luci-app-aliyu
 popd
 
 # Add Mosdns
-rm -rf feeds/packages/net/mosdns
+mkdir -p files/usr/share/v2ray/
+wget https://gh.404delivr.workers.dev/https://github.com/QiuSimons/openwrt-mos/raw/master/dat/geoip.dat -O files/usr/share/v2ray/geoip.dat
+wget https://gh.404delivr.workers.dev/https://github.com/QiuSimons/openwrt-mos/raw/master/dat/geosite.dat -O files/usr/share/v2ray/geoip.dat
 pushd package
 svn co https://github.com/QiuSimons/openwrt-mos/trunk/luci-app-mosdns
-svn co https://github.com/QiuSimons/openwrt-mos/trunk/mosdns
+sed -i 's/\+mosdns-neo/+mosdns/g' package/luci-app-mosdns/Makefile
+#svn co https://github.com/QiuSimons/openwrt-mos/trunk/mosdns
 #sed -i '/apple-cn/d' luci-app-mosdns/root/etc/mosdns/def_config.yaml
 #sed -i 's/\${{ uci -q get mosdns.mosdns.remote_dns1 }}/tls\:\/\/\$\{\{\ uci\ \-q\ get\ mosdns\.mosdns\.remote_dns1\ \}\}/g' luci-app-mosdns/root/etc/mosdns/def_config.yaml
 #sed -i 's/\${{ uci -q get mosdns.mosdns.remote_dns2 }}/tls\:\/\/\$\{\{\ uci\ \-q\ get\ mosdns\.mosdns\.remote_dns2\ \}\}/g' luci-app-mosdns/root/etc/mosdns/def_config.yaml
@@ -47,10 +50,7 @@ svn co https://github.com/QiuSimons/openwrt-mos/trunk/mosdns
 #sed -i 's/101.226.4.6/202.106.0.20/g'  luci-app-mosdns/root/etc/mosdns/library.sh
 #sed -i 's/119.29.29.29/114.114.114.114/g'  luci-app-mosdns/root/etc/mosdns/library.sh
 #sed -i 's/101.226.4.6/1.2.4.8/g'  luci-app-mosdns/root/etc/mosdns/library.sh
-mkdir -p files/usr/share/v2ray/
-wget https://gh.404delivr.workers.dev/https://github.com/QiuSimons/openwrt-mos/raw/master/dat/geoip.dat -O files/usr/share/v2ray/geoip.dat
-wget https://gh.404delivr.workers.dev/https://github.com/QiuSimons/openwrt-mos/raw/master/dat/geosite.dat -O files/usr/share/v2ray/geoip.dat
-export CGO_ENABLED=1
+#export CGO_ENABLED=1
 popd
 
 # Add AdGuardHome
