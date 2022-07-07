@@ -41,7 +41,7 @@ wget https://gh.404delivr.workers.dev/https://github.com/QiuSimons/openwrt-mos/r
 wget https://gh.404delivr.workers.dev/https://github.com/QiuSimons/openwrt-mos/raw/master/dat/geosite.dat -O files/usr/share/v2ray/geoip.dat
 pushd package
 svn co https://github.com/QiuSimons/openwrt-mos/trunk/luci-app-mosdns
-sed -i 's/\+mosdns-neo/+mosdns/g' package/luci-app-mosdns/Makefile
+sed -i 's/\+mosdns-neo/\+mosdns/g' package/luci-app-mosdns/Makefile
 #svn co https://github.com/QiuSimons/openwrt-mos/trunk/mosdns
 #sed -i '/apple-cn/d' luci-app-mosdns/root/etc/mosdns/def_config.yaml
 #sed -i 's/\${{ uci -q get mosdns.mosdns.remote_dns1 }}/tls\:\/\/\$\{\{\ uci\ \-q\ get\ mosdns\.mosdns\.remote_dns1\ \}\}/g' luci-app-mosdns/root/etc/mosdns/def_config.yaml
