@@ -42,8 +42,8 @@ wget https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202207062
 pushd package
 svn co https://github.com/QiuSimons/openwrt-mos/trunk/luci-app-mosdns
 sed -i 's/\+mosdns-neo/\+mosdns/g' luci-app-mosdns/Makefile
-rm -rf luci-app-mosdns/root/etc/mosdns/whitelist.txt
-wget https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202207062212/apple-cn.txt -O luci-app-mosdns/root/etc/mosdns/whitelist.txt
+#rm -rf luci-app-mosdns/root/etc/mosdns/whitelist.txt
+#wget https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202207062212/apple-cn.txt -O luci-app-mosdns/root/etc/mosdns/whitelist.txt
 
 #svn co https://github.com/QiuSimons/openwrt-mos/trunk/mosdns
 
