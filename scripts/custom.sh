@@ -46,9 +46,9 @@ rm -rf luci-app-mosdns/root/etc/mosdns/whitelist.txt
 wget https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202207062212/apple-cn.txt -O luci-app-mosdns/root/etc/mosdns/whitelist.txt
 
 #svn co https://github.com/QiuSimons/openwrt-mos/trunk/mosdns
-#sed -i '/apple-cn/d' luci-app-mosdns/root/etc/mosdns/def_config.yaml
-#sed -i 's/\${{ uci -q get mosdns.mosdns.remote_dns1 }}/tls\:\/\/\$\{\{\ uci\ \-q\ get\ mosdns\.mosdns\.remote_dns1\ \}\}/g' luci-app-mosdns/root/etc/mosdns/def_config.yaml
-#sed -i 's/\${{ uci -q get mosdns.mosdns.remote_dns2 }}/tls\:\/\/\$\{\{\ uci\ \-q\ get\ mosdns\.mosdns\.remote_dns2\ \}\}/g' luci-app-mosdns/root/etc/mosdns/def_config.yaml
+
+sed -i 's/remotedns1/tls\: \/\/localdns1' luci-app-mosdns/root/etc/mosdns/def_config_orig.yaml
+sed -i 's/remotedns2/tls\:\/\/localdns1' luci-app-mosdns/root/etc/mosdns/def_config_orig.yaml
 
 sed -i 's/119.29.29.29/114.114.114.114/g'  luci-app-mosdns/root/etc/mosdns/library.sh
 sed -i 's/101.226.4.6/1.2.4.8/g'  luci-app-mosdns/root/etc/mosdns/library.sh
