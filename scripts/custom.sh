@@ -37,11 +37,14 @@ popd
 
 # Add Mosdns
 mkdir -p files/usr/share/v2ray/
+mkdir -p fiels/etc/mosdns
 wget https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202207062212/geoip.dat -O files/usr/share/v2ray/geoip.dat
 wget https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202207062212/geosite.dat -O files/usr/share/v2ray/geoip.dat
 pushd package
 svn co https://github.com/QiuSimons/openwrt-mos/trunk/luci-app-mosdns
 sed -i 's/\+mosdns-neo/\+mosdns/g' luci-app-mosdns/Makefile
+wget https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202207062212/apple-cn.txt -O luci-app-mosdns/root/etc/mosdns/whitelist.txt
+
 #svn co https://github.com/QiuSimons/openwrt-mos/trunk/mosdns
 #sed -i '/apple-cn/d' luci-app-mosdns/root/etc/mosdns/def_config.yaml
 #sed -i 's/\${{ uci -q get mosdns.mosdns.remote_dns1 }}/tls\:\/\/\$\{\{\ uci\ \-q\ get\ mosdns\.mosdns\.remote_dns1\ \}\}/g' luci-app-mosdns/root/etc/mosdns/def_config.yaml
