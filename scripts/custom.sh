@@ -37,8 +37,8 @@ popd
 
 # Add Mosdns
 mkdir -p files/usr/share/v2ray/
-wget https://gh.404delivr.workers.dev/https://github.com/QiuSimons/openwrt-mos/raw/master/dat/geoip.dat -O files/usr/share/v2ray/geoip.dat
-wget https://gh.404delivr.workers.dev/https://github.com/QiuSimons/openwrt-mos/raw/master/dat/geosite.dat -O files/usr/share/v2ray/geoip.dat
+wget https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202207062212/geoip.dat -O files/usr/share/v2ray/geoip.dat
+wget https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202207062212/geosite.dat -O files/usr/share/v2ray/geoip.dat
 pushd package
 svn co https://github.com/QiuSimons/openwrt-mos/trunk/luci-app-mosdns
 sed -i 's/\+mosdns-neo/\+mosdns/g' luci-app-mosdns/Makefile
