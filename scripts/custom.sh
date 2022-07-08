@@ -54,6 +54,7 @@ wget https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/appl
 wget https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/google-cn.txt -O /tmp/google-cn.txt
 
 echo 'netcts.cdn-apple.com 127.0.0.1' >> luci-app-mosdns/root/etc/mosdns/rule/hosts.txt
+echo 'render.alipay.com' >> luci-app-mosdns/root/etc/mosdns/rule/whitelist.txt
 
 for i in `cat /tmp/apple-cn.txt`
 do
