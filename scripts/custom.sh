@@ -45,6 +45,8 @@ sed -i 's/\+mosdns-neo/\+mosdns/g' luci-app-mosdns/Makefile
 sed -i 's/\"208.67.222.222\"/\"tls\:\/\/208.67.222.222\"/g' luci-app-mosdns/luasrc/model/cbi/mosdns/basic.lua
 sed -i 's/\"208.67.220.220\"/\"tls\:\/\/208.67.220.220\"/g' luci-app-mosdns/luasrc/model/cbi/mosdns/basic.lua
 
+sed -i 's/https\:\/\/gh.404delivr.workers.dev\/https\:\/\/github.com\/QiuSimons\/openwrt-mos\/raw\/master\/dat\//https\:\/\/github.com\/Loyalsoldier\/v2ray-rules-dat\/releases\/latest\/download\//g' luci-app-mosdns/root/etc/mosdns/library.sh
+sed -i 's/https\:\/\/github.com\/Loyalsoldier\/v2ray-rules-dat\/releases\/latest\/download\//https\:\/\/github.com\/Loyalsoldier\/v2ray-rules-dat\/releases\/latest\/download\//g' luci-app-mosdns/root/etc/mosdns/library.sh
 sed -i 's/119.29.29.29/114.114.114.114/g'  luci-app-mosdns/root/etc/mosdns/library.sh
 sed -i 's/101.226.4.6/1.2.4.8/g'  luci-app-mosdns/root/etc/mosdns/library.sh
 popd
