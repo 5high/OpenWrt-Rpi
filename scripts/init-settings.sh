@@ -86,8 +86,8 @@ uci set mosdns.mosdns.geo_auto_update='1'
 uci set mosdns.mosdns.redirect='1'
 uci set mosdns.mosdns.enabled='1'
 uci set mosdns.mosdns.listen_port='5355'
-uci set mosdns.mosdns.remote_dns1='208.67.222.222'
-uci set mosdns.mosdns.remote_dns2='208.67.220.220'
+uci set mosdns.mosdns.remote_dns1='tls://208.67.222.222'
+uci set mosdns.mosdns.remote_dns2='tls://208.67.220.220'
 /bin/bash /etc/mosdns/set.sh &
 
 # Check file system during boot
