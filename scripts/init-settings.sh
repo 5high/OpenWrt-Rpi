@@ -88,13 +88,6 @@ uci set mosdns.mosdns.enabled='1'
 uci set mosdns.mosdns.listen_port='5355'
 uci set mosdns.mosdns.remote_dns1='208.67.222.222'
 uci set mosdns.mosdns.remote_dns2='208.67.220.220'
-uci set "passwall.@global[0].dns_mode=udp"
-uci set "passwall.@global[0].dns_forward=127.0.0.1:5355"
-uci set "passwall.@global[0].remote_dns=127.0.0.1:5355"
-uci set "passwall.@global[0].up_china_dns=127.0.0.1:5355"
-uci set "passwall.@global[0].custom_dns=127.0.0.1#5553"
-uci set "passwall.@global[0].remote_dns=127.0.0.1:5355"
-uci set "shadowsocksr.@global[0].tunnel_forward=127.0.0.1:5355"
 /bin/bash /etc/mosdns/set.sh &
 
 # Check file system during boot
