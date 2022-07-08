@@ -42,13 +42,8 @@ wget https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202207062
 pushd package
 svn co https://github.com/QiuSimons/openwrt-mos/trunk/luci-app-mosdns
 sed -i 's/\+mosdns-neo/\+mosdns/g' luci-app-mosdns/Makefile
-#rm -rf luci-app-mosdns/root/etc/mosdns/whitelist.txt
-#wget https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202207062212/apple-cn.txt -O luci-app-mosdns/root/etc/mosdns/whitelist.txt
-
-#svn co https://github.com/QiuSimons/openwrt-mos/trunk/mosdns
-
-sed -i 's/remotedns1/tls\: \/\/localdns1' luci-app-mosdns/root/etc/mosdns/def_config_orig.yaml
-sed -i 's/remotedns2/tls\:\/\/localdns1' luci-app-mosdns/root/etc/mosdns/def_config_orig.yaml
+sed -i 's/\"208.67.222.222\"/\"tls\:\/\/208.67.222.222\"/g' luci-app-mosdns/luasrc/model/cbi/mosdns/basic.lua
+sed -i 's/\"208.67.220.220\"/\"tls\:\/\/208.67.220.220\"/g' luci-app-mosdns/luasrc/model/cbi/mosdns/basic.lua
 
 sed -i 's/119.29.29.29/114.114.114.114/g'  luci-app-mosdns/root/etc/mosdns/library.sh
 sed -i 's/101.226.4.6/1.2.4.8/g'  luci-app-mosdns/root/etc/mosdns/library.sh
