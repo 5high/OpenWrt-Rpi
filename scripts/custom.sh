@@ -49,6 +49,20 @@ sed -i 's/https\:\/\/gh.404delivr.workers.dev\/https\:\/\/github.com\/QiuSimons\
 sed -i 's/https\:\/\/github.com\/Loyalsoldier\/v2ray-rules-dat\/releases\/latest\/download\//https\:\/\/github.com\/Loyalsoldier\/v2ray-rules-dat\/releases\/latest\/download\//g' luci-app-mosdns/root/etc/mosdns/library.sh
 sed -i 's/119.29.29.29/114.114.114.114/g'  luci-app-mosdns/root/etc/mosdns/library.sh
 sed -i 's/101.226.4.6/1.2.4.8/g'  luci-app-mosdns/root/etc/mosdns/library.sh
+
+wget https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/apple-cn.txt -O /tmp/apple-cn.txt
+wget https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/google-cn.txt -O /tmp/google-cn.txt
+
+for i in `cat /tmp/apple-cn.txt`
+do
+  echo $i >> luci-app-mosdns/root/etc/mosdns/rule/whitelist.txt
+done
+
+for i in `cat /tmp/google-cn.txt`
+do
+  echo $i >> luci-app-mosdns/root/etc/mosdns/rule/whitelist.txt
+done
+
 popd
 
 # Add AdGuardHome
