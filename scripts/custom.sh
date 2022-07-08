@@ -47,8 +47,8 @@ sed -i 's/\"208.67.220.220\"/\"tls\:\/\/208.67.220.220\"/g' luci-app-mosdns/luas
 sed -i '/\-\ \_prefer_ipv4/d' luci-app-mosdns/root/etc/mosdns/def_config_orig.yaml
 sed -i 's/https\:\/\/gh.404delivr.workers.dev\/https\:\/\/github.com\/QiuSimons\/openwrt-mos\/raw\/master\/dat\//https\:\/\/github.com\/Loyalsoldier\/v2ray-rules-dat\/releases\/latest\/download\//g' luci-app-mosdns/root/etc/mosdns/library.sh
 sed -i 's/https\:\/\/github.com\/Loyalsoldier\/v2ray-rules-dat\/releases\/latest\/download\//https\:\/\/github.com\/Loyalsoldier\/v2ray-rules-dat\/releases\/latest\/download\//g' luci-app-mosdns/root/etc/mosdns/library.sh
-sed -i 's/119.29.29.29/114.114.114.114/g'  luci-app-mosdns/root/etc/mosdns/library.sh
-sed -i 's/101.226.4.6/1.2.4.8/g'  luci-app-mosdns/root/etc/mosdns/library.sh
+sed -i 's/119.29.29.29/tls\:\/\/223.5.5.5/g'  luci-app-mosdns/root/etc/mosdns/library.sh
+sed -i 's/101.226.4.6/tls\:\/\/223.6.6.6/g'  luci-app-mosdns/root/etc/mosdns/library.sh
 
 wget https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/apple-cn.txt -O /tmp/apple-cn.txt
 wget https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/google-cn.txt -O /tmp/google-cn.txt
