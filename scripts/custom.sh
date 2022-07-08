@@ -53,6 +53,8 @@ sed -i 's/101.226.4.6/1.2.4.8/g'  luci-app-mosdns/root/etc/mosdns/library.sh
 wget https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/apple-cn.txt -O /tmp/apple-cn.txt
 wget https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/google-cn.txt -O /tmp/google-cn.txt
 
+echo 'netcts.cdn-apple.com 127.0.0.1' >> luci-app-mosdns/root/etc/mosdns/rule/hosts.txt
+
 for i in `cat /tmp/apple-cn.txt`
 do
   echo $i >> luci-app-mosdns/root/etc/mosdns/rule/whitelist.txt
