@@ -1,4 +1,5 @@
 ## fork来增删改一下来适合hassio安装，尽量不出现苹果家庭配对等问题。
+# 自用软件增加AdGuardHome, MosDNS, ACME, 阿里云盘WebDav，阿里云盘FUSE，Udpxy，IGMPProxy，UPNP。
 
 
 # [OpenWrt-Rpi](https://github.com/SuLingGG/OpenWrt-Rpi)
